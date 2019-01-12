@@ -19,6 +19,8 @@ namespace LedyBot_Giveaway_Details_Batch_Creator
         public Form1()
         {
             InitializeComponent();
+            this.FormClosing += new FormClosingEventHandler(Form1_FormClosing);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,6 +32,7 @@ namespace LedyBot_Giveaway_Details_Batch_Creator
 
         private void WriteXML(string[] Files,string Dir)
         {
+           
             XmlWriterSettings settings = new XmlWriterSettings()
             {
                 Indent = true,
@@ -124,5 +127,18 @@ namespace LedyBot_Giveaway_Details_Batch_Creator
             }
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = Properties.Settings.Default.Directory;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.Directory = textBox1.Text;
+            Properties.Settings.Default.Save();
+
+        }
+
     }
 }
