@@ -64,7 +64,7 @@ namespace LedyBot_Giveaway_Details_Batch_Creator
                     xml.WriteStartElement("Giveaway_x0020_Details");
                     xml.WriteElementString("Dex_x0020_Number", pk7.Species.ToString());
                     xml.WriteElementString("Specific_x0020_Path", file);
-                    xml.WriteElementString("Optional_x0020_Path", file.Replace(Path.GetFileNameWithoutExtension(file) + ".pk7",""));
+                    xml.WriteElementString("Optional_x0020_Path", file.Replace(Path.GetFileName(file),""));
                     xml.WriteElementString("Gender_x0020_Index", GetGenderIndex(pk7.Gender).ToString());
                     xml.WriteElementString("Level_x0020_Index", GetLevelIndex(pk7.CurrentLevel).ToString());
                     xml.WriteElementString("Count", "-1");
