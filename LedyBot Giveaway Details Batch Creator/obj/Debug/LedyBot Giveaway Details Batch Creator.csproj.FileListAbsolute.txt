@@ -8,3 +8,13 @@ C:\Users\Chris\Documents\Visual Studio 2017\Projects\LedyBot Giveaway Details Ba
 C:\Users\Chris\Documents\Visual Studio 2017\Projects\LedyBot Giveaway Details Batch Creator\LedyBot Giveaway Details Batch Creator\obj\Debug\LedyBot Giveaway Details Batch Creator.csproj.CoreCompileInputs.cache
 C:\Users\Chris\Documents\Visual Studio 2017\Projects\LedyBot Giveaway Details Batch Creator\LedyBot Giveaway Details Batch Creator\obj\Debug\LedyBot Giveaway Details Batch Creator.exe
 C:\Users\Chris\Documents\Visual Studio 2017\Projects\LedyBot Giveaway Details Batch Creator\LedyBot Giveaway Details Batch Creator\obj\Debug\LedyBot Giveaway Details Batch Creator.pdb
+C:\Users\Chris\Documents\GitHub\LedyBot-Giveaway-Details-Batch-Creator\LedyBot Giveaway Details Batch Creator\bin\Debug\LedyBot Giveaway Details Batch Creator.exe.config
+C:\Users\Chris\Documents\GitHub\LedyBot-Giveaway-Details-Batch-Creator\LedyBot Giveaway Details Batch Creator\bin\Debug\LedyBot Giveaway Details Batch Creator.exe
+C:\Users\Chris\Documents\GitHub\LedyBot-Giveaway-Details-Batch-Creator\LedyBot Giveaway Details Batch Creator\bin\Debug\LedyBot Giveaway Details Batch Creator.pdb
+C:\Users\Chris\Documents\GitHub\LedyBot-Giveaway-Details-Batch-Creator\LedyBot Giveaway Details Batch Creator\obj\Debug\LedyBot Giveaway Details Batch Creator.csprojAssemblyReference.cache
+C:\Users\Chris\Documents\GitHub\LedyBot-Giveaway-Details-Batch-Creator\LedyBot Giveaway Details Batch Creator\obj\Debug\LedyBot_Giveaway_Details_Batch_Creator.Form1.resources
+C:\Users\Chris\Documents\GitHub\LedyBot-Giveaway-Details-Batch-Creator\LedyBot Giveaway Details Batch Creator\obj\Debug\LedyBot_Giveaway_Details_Batch_Creator.Properties.Resources.resources
+C:\Users\Chris\Documents\GitHub\LedyBot-Giveaway-Details-Batch-Creator\LedyBot Giveaway Details Batch Creator\obj\Debug\LedyBot Giveaway Details Batch Creator.csproj.GenerateResource.cache
+C:\Users\Chris\Documents\GitHub\LedyBot-Giveaway-Details-Batch-Creator\LedyBot Giveaway Details Batch Creator\obj\Debug\LedyBot Giveaway Details Batch Creator.csproj.CoreCompileInputs.cache
+C:\Users\Chris\Documents\GitHub\LedyBot-Giveaway-Details-Batch-Creator\LedyBot Giveaway Details Batch Creator\obj\Debug\LedyBot Giveaway Details Batch Creator.exe
+C:\Users\Chris\Documents\GitHub\LedyBot-Giveaway-Details-Batch-Creator\LedyBot Giveaway Details Batch Creator\obj\Debug\LedyBot Giveaway Details Batch Creator.pdb
