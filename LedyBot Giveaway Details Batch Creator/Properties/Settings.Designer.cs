@@ -34,5 +34,17 @@ namespace LedyBot_Giveaway_Details_Batch_Creator.Properties {
                 this["Directory"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IgnoreNicknames {
+            get {
+                return ((bool)(this["IgnoreNicknames"]));
+            }
+            set {
+                this["IgnoreNicknames"] = value;
+            }
+        }
     }
 }

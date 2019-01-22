@@ -5,5 +5,8 @@
     <Setting Name="Directory" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Pokemon\</Value>
     </Setting>
+    <Setting Name="IgnoreNicknames" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -26,13 +26,13 @@ namespace LedyBot_Giveaway_Details_Batch_Creator
         private void button1_Click(object sender, EventArgs e)
         {
             string[] Files = Directory.GetFiles(textBox1.Text, "*.pk7", SearchOption.AllDirectories);
-            WriteXML(Files,textBox1.Text);
+            WriteXML(Files, textBox1.Text);
         }
 
 
-        private void WriteXML(string[] Files,string Dir)
+        private void WriteXML(string[] Files, string Dir)
         {
-           
+
             XmlWriterSettings settings = new XmlWriterSettings()
             {
                 Indent = true,
@@ -54,7 +54,7 @@ namespace LedyBot_Giveaway_Details_Batch_Creator
             {
                 if (file.EndsWith(".pk7"))
                 {
-                   
+
                     PKM pk7 = PKMConverter.GetPKMfromBytes(File.ReadAllBytes(file));
                     if (DexList.Contains(pk7.Species))
                     {
@@ -64,7 +64,15 @@ namespace LedyBot_Giveaway_Details_Batch_Creator
                     xml.WriteStartElement("Giveaway_x0020_Details");
                     xml.WriteElementString("Dex_x0020_Number", pk7.Species.ToString());
                     xml.WriteElementString("Specific_x0020_Path", file);
-                    xml.WriteElementString("Optional_x0020_Path", file.Replace(Path.GetFileName(file),""));
+                    if (!checkBox1.Checked)
+                    {
+                        xml.WriteElementString("Optional_x0020_Path", file.Replace(Path.GetFileName(file), ""));
+                    }
+                    else
+                    {
+                        xml.WriteElementString("Optional_x0020_Path", "");
+
+                    }
                     xml.WriteElementString("Gender_x0020_Index", GetGenderIndex(pk7.Gender).ToString());
                     xml.WriteElementString("Level_x0020_Index", GetLevelIndex(pk7.CurrentLevel).ToString());
                     xml.WriteElementString("Count", "-1");
@@ -83,7 +91,7 @@ namespace LedyBot_Giveaway_Details_Batch_Creator
             xml.Close();
             richTextBox1.AppendText("\n\nDone, added " + Count.ToString() + " Pokemon to Giveaway Details.\n GiveawayDetails.xml is located here: \n\n" + Directory.GetCurrentDirectory() + @"\GiveawayDetails.xml");
             richTextBox1.ScrollToCaret();
-            
+
         }
 
 
@@ -100,17 +108,17 @@ namespace LedyBot_Giveaway_Details_Batch_Creator
         private int GetLevelIndex(int Level)
         {
 
-            if (Level == 100) { Level = 0; }
-            else if (Level >= 91 && Level != 100) { Level = 10; }
-            else if (Level >= 81 && Level < 91) { Level = 9; }
-            else if (Level >= 71 && Level < 81) { Level = 8; }
-            else if (Level >= 61 && Level < 71) { Level = 7; }
-            else if (Level >= 51 && Level < 61) { Level = 6; }
-            else if (Level >= 41 && Level < 51) { Level = 5; }
-            else if (Level >= 31 && Level < 41) { Level = 4; }
-            else if (Level >= 21 && Level < 31) { Level = 3; }
-            else if (Level >= 11 && Level < 21) { Level = 2; }
-            else if (Level >= 0 && Level < 11) { Level = 1; }
+            if (Level == 100) { Level = 10; }
+            else if (Level >= 91 && Level != 100) { Level = 9; }
+            else if (Level >= 81 && Level < 91) { Level = 8; }
+            else if (Level >= 71 && Level < 81) { Level = 7; }
+            else if (Level >= 61 && Level < 71) { Level = 6; }
+            else if (Level >= 51 && Level < 61) { Level = 5; }
+            else if (Level >= 41 && Level < 51) { Level = 4; }
+            else if (Level >= 31 && Level < 41) { Level = 3; }
+            else if (Level >= 21 && Level < 31) { Level = 2; }
+            else if (Level >= 11 && Level < 21) { Level = 1; }
+            else if (Level >= 0 && Level < 11) { Level = 0; }
             return Level;
         }
 
@@ -130,12 +138,15 @@ namespace LedyBot_Giveaway_Details_Batch_Creator
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            checkBox1.Checked = Properties.Settings.Default.IgnoreNicknames;
+
             textBox1.Text = Properties.Settings.Default.Directory;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.Directory = textBox1.Text;
+            Properties.Settings.Default.IgnoreNicknames = checkBox1.Checked;
             Properties.Settings.Default.Save();
 
         }
